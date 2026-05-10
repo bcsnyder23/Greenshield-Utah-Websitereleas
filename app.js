@@ -65,4 +65,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll(); // Initial check
+    // Robust Form Submission Handler
+    const contactForm = document.getElementById('contact-form');
+    const successToast = document.querySelector('[data-fs-success]');
+    const errorToast = document.querySelector('[data-fs-error]');
+    const submitBtn = document.querySelector('[data-fs-submit-btn]');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Show loading state
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Sending...';
+            submitBtn.disabled = true;
+
+            try {
+                const formData = new FormData(contactForm);
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Show success toast
+                    successToast.style.display = 'block';
+                    contactForm.reset();
+                    
+                    // Hide toast after 5 seconds
+                    setTimeout(() => {
+                        successToast.style.display = 'none';
+                    }, 5000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Show error toast
+                errorToast.style.display = 'block';
+                setTimeout(() => {
+                    errorToast.style.display = 'none';
+                }, 5000);
+            } finally {
+                // Restore button state
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
+    }
 });
