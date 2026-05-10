@@ -167,13 +167,13 @@
                         </div>
                     </div>
                     <div class="reveal" style="background: white; padding: 50px; border-radius: 4px; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
-                        <!-- Form Status Messages -->
-                        <div data-fs-success style="display: none; background: var(--color-forest); color: white; padding: 20px; border-radius: 4px; margin-bottom: 20px; text-align: center;">
-                            <h3>Message Sent!</h3>
-                            <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                        <!-- Floating Notifications -->
+                        <div data-fs-success style="display: none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 9999; background: var(--color-forest); color: white; padding: 20px 40px; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); text-align: center; min-width: 300px; animation: slideDown 0.5s ease-out;">
+                            <h3 style="margin: 0 0 5px 0; font-size: 1.2rem;">Message Sent!</h3>
+                            <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">We'll get back to you within 24 hours.</p>
                         </div>
-                        <div data-fs-error style="display: none; background: #d32f2f; color: white; padding: 20px; border-radius: 4px; margin-bottom: 20px; text-align: center;">
-                            Oops! There was a problem submitting your form. Please try again.
+                        <div data-fs-error style="display: none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 9999; background: #d32f2f; color: white; padding: 20px 40px; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); text-align: center; min-width: 300px; animation: slideDown 0.5s ease-out;">
+                            Oops! There was a problem submitting your form.
                         </div>
 
                         <form id="contact-form" action="https://formspree.io/f/xnjwoyjd" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
