@@ -1,7 +1,7 @@
 /* Design Tokens */
 :root {
     /* Primary Colors */
-    --color-forest: #15431C;
+    --color-forest: #009D48;
     --color-navy: #001020;
     --color-white: #FFFFFF;
     
@@ -136,7 +136,7 @@ img {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(21, 67, 28, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 157, 72, 0.3);
 }
 
 .btn-navy {
@@ -197,11 +197,7 @@ header.scrolled .logo-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-shadow: 
-        -1px -1px 0 #000,  
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .nav-links {
@@ -215,11 +211,7 @@ header.scrolled .logo-text {
     text-transform: uppercase;
     color: var(--color-white);
     letter-spacing: 0.05em;
-    text-shadow: 
-        -1px -1px 0 #000,  
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 header.scrolled .nav-links a {
@@ -268,12 +260,7 @@ body:not(.home-page) .hero {
     font-size: clamp(4rem, 8vw, 7rem);
     line-height: 1; /* Increased from 0.85 for "straightness" */
     margin-bottom: 25px;
-    text-shadow: 
-        -1px -1px 0 #000,  
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000,
-         0px  4px 10px rgba(0,0,0,0.5);
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 p {
@@ -284,12 +271,7 @@ p {
     max-width: 550px;
     margin-bottom: 40px;
     font-weight: 400;
-    text-shadow: 
-        -1px -1px 0 #000,  
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000,
-         0px  2px 5px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6), 0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
 /* Services Bar */
