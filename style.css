@@ -185,6 +185,7 @@ nav {
 
 header.scrolled .logo-text {
     color: var(--color-forest);
+    text-shadow: none;
 }
 
 .logo-text {
@@ -196,6 +197,11 @@ header.scrolled .logo-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
 }
 
 .nav-links {
@@ -209,10 +215,16 @@ header.scrolled .logo-text {
     text-transform: uppercase;
     color: var(--color-white);
     letter-spacing: 0.05em;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
 }
 
 header.scrolled .nav-links a {
     color: var(--color-navy);
+    text-shadow: none;
 }
 
 header.scrolled .nav-links a:hover {
@@ -256,6 +268,12 @@ body:not(.home-page) .hero {
     font-size: clamp(4rem, 8vw, 7rem);
     line-height: 1; /* Increased from 0.85 for "straightness" */
     margin-bottom: 25px;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000,
+         0px  4px 10px rgba(0,0,0,0.5);
 }
 
 p {
@@ -266,6 +284,12 @@ p {
     max-width: 550px;
     margin-bottom: 40px;
     font-weight: 400;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000,
+         0px  2px 5px rgba(0,0,0,0.5);
 }
 
 /* Services Bar */
