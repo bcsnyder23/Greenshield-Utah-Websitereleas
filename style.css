@@ -511,10 +511,23 @@ img {
         grid-template-columns: 1fr !important;
     }
 
-    footer [style*="display: flex"] {
-        flex-direction: column;
-        gap: 40px;
-        align-items: flex-start;
+    footer .container > div:first-child {
+        flex-direction: column !important;
+        gap: 40px !important;
+        align-items: flex-start !important;
+    }
+    footer .container > div:first-child > div:last-child {
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+    footer .container > div:last-child {
+        flex-direction: column !important;
+        gap: 20px !important;
+        align-items: center !important;
+    }
+    
+    .logo-text {
+        font-size: 1.2rem;
     }
 }
 
