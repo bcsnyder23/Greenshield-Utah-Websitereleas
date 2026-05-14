@@ -141,54 +141,92 @@
 
 
         <!-- Testimonials Section -->
-        <section id="testimonials" style="padding: 120px 0; background: var(--bg-neutral);">
+        <section id="testimonials" style="padding: 120px 0; background: #fcfcfc; border-top: 1px solid #eee;">
             <div class="container">
-                <div style="text-align: center; margin-bottom: 70px;" class="reveal">
-                    <h5
-                        style="color: var(--color-forest); margin-bottom: 20px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.85rem;">
-                        Client Stories</h5>
-                    <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); color: var(--color-navy); margin-bottom: 25px;">
-                        Trusted by Utah Families</h2>
-                    <p style="max-width: 680px; margin: 0 auto; opacity: 0.75; font-size: 1.1rem; line-height: 1.8;">See
-                        what your neighbors have to say about their new backyard projects.</p>
+                <div style="text-align: center; margin-bottom: 80px;" class="reveal">
+                    <h5 style="color: var(--color-forest); margin-bottom: 15px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.75rem; opacity: 0.8;">Client Stories</h5>
+                    <h2 style="font-size: clamp(2.2rem, 5vw, 3.5rem); color: var(--color-navy); margin-bottom: 20px; font-weight: 700;">Utah's Trusted Builders</h2>
+                    <p style="max-width: 540px; margin: 0 auto; opacity: 0.6; font-size: 1rem; line-height: 1.7;">Real families, real projects, and the results of our commitment to quality.</p>
                 </div>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 900px; margin: 0 auto;"
-                    class="reveal">
-                    <!-- Video 1 -->
-                    <div
-                        style="border-radius: 8px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,16,32,0.1); background: var(--color-white);">
-                        <video controls preload="metadata"
-                            style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; background: #000;">
-                            <source src="assets/videos/AFD59EC8-9FAE-4BFE-89E0-A3A45279B505.MOV" type="video/quicktime">
-                            <source src="assets/videos/AFD59EC8-9FAE-4BFE-89E0-A3A45279B505.MOV" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div style="padding: 30px;">
-                            <h4 style="font-size: 1.4rem; color: var(--color-navy); margin-bottom: 10px;">"A true
-                                transformation."</h4>
-                            <p style="font-size: 1rem; opacity: 0.7; line-height: 1.6;">Our crew handles the small
-                                details to make sure you're happy with the finished project.</p>
+
+                <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; max-width: 1200px; margin: 0 auto; align-items: start;" class="reveal">
+                    
+                    <!-- Featured Testimonial (Left Column) -->
+                    <div class="testimonial-card featured" style="grid-row: span 2; height: 100%;">
+                        <div style="background: var(--color-white); border-radius: 12px; overflow: hidden; border: 1px solid #efefef; box-shadow: 0 15px 45px rgba(0,0,0,0.05); display: flex; flex-direction: column; height: 100%;">
+                            <iframe src="https://www.instagram.com/reel/DUlSC_LEWFG/embed" 
+                                    width="100%" 
+                                    height="640" 
+                                    frameborder="0" 
+                                    scrolling="no" 
+                                    allowtransparency="true" 
+                                    style="border: none; display: block; flex-shrink: 0;">
+                            </iframe>
+                            <div style="padding: 35px; text-align: left; background: white; flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
+                                <h5 style="color: var(--color-forest); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px;">Featured Story</h5>
+                                <h4 style="font-size: 1.5rem; color: var(--color-navy); margin-bottom: 12px; font-weight: 700;">The Family Retreat</h4>
+                                <p style="font-size: 1rem; opacity: 0.7; line-height: 1.7; margin: 0;">Jace and Darien share how their new backyard transformation became the favorite spot for family and friends to gather, connect, and create lasting memories.</p>
+                            </div>
                         </div>
                     </div>
-                    <!-- Video 2 -->
-                    <div
-                        style="border-radius: 8px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,16,32,0.1); background: var(--color-white);">
-                        <video controls preload="metadata"
-                            style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; background: #000;">
-                            <source src="assets/videos/D10EB142-C29C-4C7E-B6E9-2A09FAF75490.MOV" type="video/quicktime">
-                            <source src="assets/videos/D10EB142-C29C-4C7E-B6E9-2A09FAF75490.MOV" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div style="padding: 30px;">
-                            <h4 style="font-size: 1.4rem; color: var(--color-navy); margin-bottom: 10px;">"Exceeded our
-                                expectations."</h4>
-                            <p style="font-size: 1rem; opacity: 0.7; line-height: 1.6;">We focus on solid work and
-                                keeping our word to Utah families from day one.</p>
+
+                    <!-- Side Stories (Right Column) -->
+                    <div style="display: flex; flex-direction: column; gap: 30px; height: 100%;">
+                        
+                        <!-- Card 1: Innovation -->
+                        <div class="testimonial-card small" style="transition: transform 0.3s ease;">
+                            <div style="background: var(--color-white); border-radius: 12px; overflow: hidden; border: 1px solid #efefef; box-shadow: 0 5px 15px rgba(0,0,0,0.02); display: flex; align-items: center;">
+                                <div style="width: 200px; flex-shrink: 0;">
+                                    <iframe src="https://www.instagram.com/reel/DB96ZpEyyWN/embed" 
+                                            width="100%" 
+                                            height="260" 
+                                            frameborder="0" 
+                                            scrolling="no" 
+                                            allowtransparency="true" 
+                                            style="border: none; display: block;">
+                                    </iframe>
+                                </div>
+                                <div style="padding: 25px; text-align: left; flex-grow: 1;">
+                                    <h4 style="font-size: 1.1rem; color: var(--color-navy); margin-bottom: 8px; font-weight: 700;">Space Maximized</h4>
+                                    <p style="font-size: 0.85rem; opacity: 0.6; line-height: 1.5; margin: 0;">Nate and Josh showcase custom innovation in compact Utah yards.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: On-Site -->
+                        <div class="testimonial-card small" style="transition: transform 0.3s ease;">
+                            <div style="background: var(--color-white); border-radius: 12px; overflow: hidden; border: 1px solid #efefef; box-shadow: 0 5px 15px rgba(0,0,0,0.02); display: flex; align-items: center;">
+                                <div style="width: 200px; flex-shrink: 0; aspect-ratio: 1/1; background: #000; overflow: hidden;">
+                                    <video controls preload="metadata" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                                        <source src="assets/videos/AFD59EC8-9FAE-4BFE-89E0-A3A45279B505.MOV" type="video/quicktime">
+                                        <source src="assets/videos/AFD59EC8-9FAE-4BFE-89E0-A3A45279B505.MOV" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div style="padding: 25px; text-align: left; flex-grow: 1;">
+                                    <h4 style="font-size: 1.1rem; color: var(--color-navy); margin-bottom: 8px; font-weight: 700;">On-Site Progress</h4>
+                                    <p style="font-size: 0.85rem; opacity: 0.6; line-height: 1.5; margin: 0;">Live update from our crew finishing a build in Pleasant Grove.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- CSS for Testimonial Hover -->
+        <style>
+            .testimonial-card:hover {
+                transform: translateY(-5px);
+            }
+            .testimonial-card.featured:hover {
+                transform: translateY(-10px);
+            }
+            @media (max-width: 991px) {
+                #testimonials div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; gap: 40px !important; }
+                .testimonial-card.small > div { flex-direction: column !important; }
+                .testimonial-card.small div[style*="width: 200px"] { width: 100% !important; }
+            }
+        </style>
 
         <!-- Mission Section (Built on Craftsmanship) -->
         <section id="about" style="background: var(--color-white); padding: 120px 0;">
@@ -197,8 +235,18 @@
                     <div class="reveal">
                         <h2 style="font-size: 4rem; margin-bottom: 30px;">Built on Craftsmanship.<br>Driven by
                             Integrity.</h2>
-                        <p style="margin-bottom: 40px; opacity: 0.8;">High-quality builds using the best materials from
+                        <p style="margin-bottom: 25px; opacity: 0.8;">High-quality builds using the best materials from
                             our partners at San Juan, Latham, and Belgard.</p>
+                        <div style="display: flex; align-items: center; gap: 40px; margin-bottom: 25px; opacity: 1; flex-wrap: wrap;">
+                            <img src="assets/images/SanJuanPools-Logo-BestOfTheBest.png" alt="San Juan Pools Logo" style="height: 75px; width: auto;">
+                            <img src="assets/images/Logo_Latham_Builder_70th_CMYK.jpg" alt="Latham Pools Logo" style="height: 50px; width: auto;">
+                            <img src="assets/images/auth-contractor.png" alt="Belgard Authorized Contractor Logo" style="height: 60px; width: auto;">
+                        </div>
+                        <div style="display: flex; gap: 15px; margin-bottom: 45px; align-items: center; justify-content: flex-start; flex-wrap: wrap;">
+                            <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; opacity: 0.5; display: block; width: 100%; margin-bottom: 5px;">Browse Our Partner Catalogs:</span>
+                            <a href="https://www.sanjuanpools.com" target="_blank" class="btn btn-navy" style="padding: 10px 20px; font-size: 0.8rem; border-radius: 4px; background: var(--color-navy); color: white; text-decoration: none;">San Juan Pools ↗</a>
+                            <a href="https://www.lathampool.com/fiberglass-pool-shapes/" target="_blank" class="btn btn-navy" style="padding: 10px 20px; font-size: 0.8rem; border-radius: 4px; background: var(--color-navy); color: white; text-decoration: none;">Latham Shapes ↗</a>
+                        </div>
 
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
                             <div style="border-left: 3px solid var(--color-forest); padding-left: 20px;">
@@ -295,6 +343,7 @@
     </footer>
 
     <script src="app.js"></script>
+    <script async src="https://www.instagram.com/embed.js"></script>
 </body>
 
 </html>
