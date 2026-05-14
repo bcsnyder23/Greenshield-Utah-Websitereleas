@@ -417,6 +417,7 @@ header:not(.scrolled) .menu-toggle span {
     .nav-links li a {
         color: var(--color-navy) !important;
         font-size: 1.5rem;
+        text-shadow: none !important;
     }
 
     .menu-toggle {
@@ -438,6 +439,17 @@ header:not(.scrolled) .menu-toggle span {
     header nav .btn-primary {
         display: none;
     }
+
+    /* Mobile Logo refinement */
+    .logo-container {
+        padding: 6px 12px;
+    }
+    .logo-mark {
+        width: 38px;
+    }
+    .logo-text {
+        font-size: 1.2rem;
+    }
 }
 
 /* Global Overflow Fix */
@@ -457,9 +469,11 @@ img {
 }
 
 @media (max-width: 768px) {
-    .hero { min-height: 70vh; padding: 60px 0; }
-    .hero-content h1, h1 { font-size: 3.5rem !important; line-height: 1.1; }
-    h2 { font-size: 2.5rem !important; }
+    .hero { min-height: 60vh; padding: 40px 0; }
+    .hero-content { padding-top: 60px; }
+    .hero-content h1, h1 { font-size: 3.2rem !important; line-height: 1.1; margin-bottom: 20px; }
+    h2 { font-size: 2.4rem !important; margin-bottom: 20px !important; }
+    p { font-size: 0.95rem; }
     
     .container { 
         padding: 0 20px; 
@@ -478,10 +492,17 @@ img {
 
     /* Reduce huge section padding on mobile */
     section[style*="padding: 120px 0"] {
-        padding: 60px 0 !important;
+        padding: 80px 0 !important;
     }
     section[style*="padding: 100px 0"] {
-        padding: 50px 0 !important;
+        padding: 60px 0 !important;
+    }
+    
+    /* Partner logos optimization */
+    div[style*="flex-wrap: wrap"] img {
+        height: auto !important;
+        width: 120px !important;
+        max-width: 40% !important;
     }
 
     .services-bar { margin-top: 0; padding: 40px 0; }
