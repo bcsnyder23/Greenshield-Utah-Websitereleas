@@ -8,10 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         const currentScrollY = window.scrollY;
-        const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
 
         // Scrolled background state
-        if (currentScrollY > 50 || !isHomePage) {
+        if (currentScrollY > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');

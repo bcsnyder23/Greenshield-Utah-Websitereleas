@@ -1,7 +1,7 @@
 /* Design Tokens */
 :root {
     /* Primary Colors */
-    --color-forest: #009D48;
+    --color-forest: #15431C;
     --color-navy: #001020;
     --color-white: #FFFFFF;
     
@@ -260,7 +260,7 @@ body:not(.home-page) .hero {
     font-size: clamp(4rem, 8vw, 7rem);
     line-height: 1; /* Increased from 0.85 for "straightness" */
     margin-bottom: 25px;
-    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 p {
@@ -271,7 +271,7 @@ p {
     max-width: 550px;
     margin-bottom: 40px;
     font-weight: 400;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6), 0 1px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
 }
 
 /* Services Bar */
