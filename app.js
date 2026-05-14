@@ -64,6 +64,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll(); // Initial check
+    // Cookie helper for HubSpot Tracking
+    const getCookie = (name) => {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    };
+
     // Robust Form Submission Handler
     const contactForm = document.getElementById('contact-form');
     const successToast = document.querySelector('[data-fs-success]');
@@ -74,6 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
+            // CONFIGURATION: Real HubSpot IDs for Green Shield Utah
+            const portalId = '244953477';
+            const formGuid = '1aa26750-5332-4d66-820a-3fa8b31c62af';
+            const hubspotUrl = `https://api-na2.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`;
+
             // Show loading state
             const originalBtnText = submitBtn.innerHTML;
             submitBtn.innerHTML = 'Sending...';
@@ -81,11 +93,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
             try {
                 const formData = new FormData(contactForm);
-                const response = await fetch(contactForm.action, {
+                
+                // Format data for HubSpot
+                const payload = {
+                    fields: [
+                        { name: 'firstname', value: formData.get('firstname') },
+                        { name: 'lastname', value: formData.get('lastname') },
+                        { name: 'email', value: formData.get('email') },
+                        { name: 'phone', value: formData.get('phone') },
+                        { name: 'message', value: formData.get('message') }
+                    ],
+                    context: {
+                        hutk: getCookie('hubspotutk'),
+                        pageUri: window.location.href,
+                        pageName: document.title
+                    },
+                    legalConsentOptions: {
+                        consent: {
+                            consentToProcess: true,
+                            text: "I agree to allow Green Shield Utah to store and process my personal data.",
+                            communications: [
+                                {
+                                    value: formData.get('consent') === 'on',
+                                    subscriptionTypeId: 1963711186,
+                                    text: "I agree to receive other communications from Green Shield Utah."
+                                }
+                            ]
+                        }
+                    }
+                };
+
+                const response = await fetch(hubspotUrl, {
                     method: 'POST',
-                    body: formData,
+                    body: JSON.stringify(payload),
                     headers: {
-                        'Accept': 'application/json'
+                        'Content-Type': 'application/json'
                     }
                 });
 
@@ -99,9 +141,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         successToast.style.display = 'none';
                     }, 5000);
                 } else {
+                    const errorData = await response.json();
+                    console.error('HubSpot Error:', errorData);
                     throw new Error('Form submission failed');
                 }
             } catch (error) {
+                console.error('Submission Error:', error);
                 // Show error toast
                 errorToast.style.display = 'block';
                 setTimeout(() => {
