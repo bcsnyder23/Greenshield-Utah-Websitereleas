@@ -458,7 +458,8 @@ img {
 
 @media (max-width: 768px) {
     .hero { min-height: 70vh; padding: 60px 0; }
-    .hero-content h1 { font-size: 3rem; line-height: 1.1; }
+    .hero-content h1, h1 { font-size: 3.5rem !important; line-height: 1.1; }
+    h2 { font-size: 2.5rem !important; }
     
     .container { 
         padding: 0 20px; 
